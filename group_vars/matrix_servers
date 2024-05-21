@@ -3502,13 +3502,15 @@ matrix_media_repo_systemd_required_services_list_auto: |
     ([devture_postgres_identifier ~ '.service'] if devture_postgres_enabled and matrix_media_repo_database_hostname == devture_postgres_connection_hostname else [])
   }}
 
+matrix_media_repo_domain: "{{ matrix_domain }}"
+
 # Auto configured server setup by the playbook
 matrix_media_repo_homeservers_auto:
   -  # Keep the dash from this line.
 
     # This should match the server_name of your homeserver, and the Host header
     # provided to the media repo.
-    name: "{{ matrix_domain }}"
+    name: "{{ matrix_media_repo_domain }}"
 
     # The base URL to where the homeserver can actually be reached by MMR.
     csApi: "{{ matrix_homeserver_container_url }}"
@@ -4633,6 +4635,8 @@ prometheus_config_scrape_configs_auto: |
     (matrix_prometheus_services_connect_scraper_nginxlog_scrape_configs if matrix_prometheus_services_connect_scraper_nginxlog_enabled else [])
     +
     (matrix_prometheus_services_connect_scraper_media_repo_scrape_configs if matrix_prometheus_services_connect_scraper_media_repo_enabled else [])
+    +
+    (matrix_prometheus_services_connect_scraper_synapse_usage_scrape_configs if matrix_prometheus_services_connect_scraper_synapse_usage_enabled else [])
   }}
 
 ######################################################################

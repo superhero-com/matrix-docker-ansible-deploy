@@ -1,0 +1,45 @@
+---
+
+- name: Pull matrix-superhero-modules git repo
+  ansible.builtin.git:
+    repo: "{{ matrix_superhero_modules_git_repo }}"
+    dest: "{{ matrix_superhero_modules_git_path }}"
+    version: "{{ matrix_superhero_modules_version }}"
+    force: true
+    clone: true
+    single_branch: true
+    accept_hostkey: true
+  become: true
+  become_user: "{{ matrix_user_username }}"
+  register: result
+
+- name: Install matrix-superhero-modules
+  ansible.builtin.copy:
+    src: "{{ matrix_superhero_modules_git_path }}{{ matrix_superhero_modules_git_src_path }}/{{ item }}"
+    dest: "{{ matrix_synapse_ext_path }}/{{ item }}"
+    owner: "{{ matrix_synapse_uid }}"
+    group: "{{ matrix_synapse_gid }}"
+    mode: 0440
+    remote_src: true
+  loop:
+    - trigger_account_validation.py
+    - room_name_checker.py
+  when: result is not failed
+
+- name: Mount trigger_account_validation.py to matrix-synapse container
+  ansible.builtin.set_fact:
+    matrix_synapse_container_extra_arguments: >
+      {{
+        matrix_synapse_container_extra_arguments | default([])
+        +
+        ["--mount type=bind,src={{ matrix_synapse_ext_path }}/trigger_account_validation.py,dst={{ matrix_synapse_in_container_python_packages_path }}/trigger_account_validation.py,ro"]
+      }}
+
+- name: Mount room_name_checker.py to matrix-synapse container
+  ansible.builtin.set_fact:
+    matrix_synapse_container_extra_arguments: >
+      {{
+        matrix_synapse_container_extra_arguments | default([])
+        +
+        ["--mount type=bind,src={{ matrix_synapse_ext_path }}/room_name_checker.py,dst={{ matrix_synapse_in_container_python_packages_path }}/room_name_checker.py,ro"]
+      }}

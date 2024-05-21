@@ -1,0 +1,10 @@
+---
+# Superhero matrix-server-modules
+# Project source code URL: https://github.com/superhero-com/matrix-server-module/
+
+matrix_superhero_modules_enabled: false
+matrix_superhero_modules_token: ""
+matrix_superhero_modules_git_repo: "https://x-access-token:{{ matrix_superhero_modules_token }}@github.com/superhero-com/synapse-patch.git"
+matrix_superhero_modules_git_path: "/matrix/superhero-synapse-patch"
+matrix_superhero_modules_git_src_path: "/custom_modules"
+matrix_superhero_modules_version: "main"
