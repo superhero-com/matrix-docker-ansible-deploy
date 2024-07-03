@@ -1,0 +1,16 @@
+---
+
+- name: Ensure room_name_checker doesn't exist
+  ansible.builtin.file:
+    path: "{{ matrix_synapse_ext_path }}/room_name_checker.py"
+    state: absent
+
+- name: Ensure initial_invite doesn't exist
+  ansible.builtin.file:
+    path: "{{ matrix_synapse_ext_path }}/initial_invite.py"
+    state: absent
+
+- name: Ensure matrix-server-modules git doesn't exist
+  ansible.builtin.file:
+    path: "{{ matrix_superhero_modules_git_path }}"
+    state: absent

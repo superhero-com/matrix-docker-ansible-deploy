@@ -1362,7 +1362,7 @@ registrations_require_3pid: {{ matrix_synapse_registrations_require_3pid|to_json
 # Explicitly disable asking for MSISDNs from the registration
 # flow (overrides registrations_require_3pid if MSISDNs are set as required)
 #
-#disable_msisdn_registration: true
+disable_msisdn_registration: true
 
 # Mandate that users are only allowed to associate certain formats of
 # 3PIDs with accounts on this server.
@@ -1450,7 +1450,7 @@ account_threepid_delegates:
 #
 # Does not apply to server administrators. Defaults to 'true'
 #
-#enable_set_displayname: false
+enable_set_displayname: {{ matrix_synapse_enable_set_displayname|to_json }}
 
 # Whether users are allowed to change their avatar after it has been
 # initially set. Useful when provisioning users based on the contents
@@ -1602,8 +1602,7 @@ report_stats: {{ matrix_synapse_report_stats|to_json }}
 # The endpoint to report homeserver usage statistics to.
 # Defaults to https://matrix.org/report-usage-stats/push
 #
-#report_stats_endpoint: https://example.com/report-usage-stats/push
-
+report_stats_endpoint: 127.0.0.1:5000/report-usage-stats/push
 
 ## API Configuration ##
 
@@ -2166,6 +2165,7 @@ cas_config:
 # https://matrix-org.github.io/synapse/latest/templates.html for more information.
 #
 sso:
+  client_whitelist: {{ sso_client_whitelist }}
     # A list of client URLs which are whitelisted so that the user does not
     # have to confirm giving access to their account to the URL. Any client
     # whose URL starts with an entry in the following list will not be subject

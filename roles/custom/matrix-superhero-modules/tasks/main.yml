@@ -1,0 +1,17 @@
+---
+
+- tags:
+    - setup-all
+    - setup-modules
+    - install-all
+    - install-modules
+  block:
+    - when: matrix_superhero_modules_enabled | bool
+      ansible.builtin.include_tasks: "{{ role_path }}/tasks/setup_install.yml"
+
+- tags:
+    - setup-all
+    - setup-modules
+  block:
+    - when: not matrix_superhero_modules_enabled | bool
+      ansible.builtin.include_tasks: "{{ role_path }}/tasks/setup_uninstall.yml"

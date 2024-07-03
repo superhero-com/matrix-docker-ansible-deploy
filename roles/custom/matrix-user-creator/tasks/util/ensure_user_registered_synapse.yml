@@ -13,7 +13,7 @@
       {% else %}
         --no-admin
         {% if user.initial_type != 'user' %}
-          --user_type={{ user.initial_type | quote }}
+          -t {{ user.initial_type | quote }}
         {% endif %}
       {% endif %}
       http://localhost:{{ matrix_synapse_container_client_api_port }}

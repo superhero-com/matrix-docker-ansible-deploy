@@ -51,54 +51,55 @@
     - galaxy/keydb
     - custom/matrix-corporal
     - custom/matrix-appservice-draupnir-for-all
-    - custom/matrix-bridge-appservice-discord
-    - custom/matrix-bridge-appservice-slack
-    - custom/matrix-bridge-appservice-webhooks
-    - custom/matrix-bridge-appservice-irc
-    - custom/matrix-bridge-appservice-kakaotalk
-    - custom/matrix-bridge-beeper-linkedin
-    - custom/matrix-bridge-go-skype-bridge
-    - custom/matrix-bridge-wechat
-    - custom/matrix-bridge-mautrix-facebook
-    - custom/matrix-bridge-mautrix-twitter
-    - custom/matrix-bridge-mautrix-hangouts
-    - custom/matrix-bridge-mautrix-googlechat
-    - custom/matrix-bridge-mautrix-instagram
+    # - custom/matrix-bridge-appservice-discord
+    # - custom/matrix-bridge-appservice-slack
+    # - custom/matrix-bridge-appservice-webhooks
+    # - custom/matrix-bridge-appservice-irc
+    # - custom/matrix-bridge-appservice-kakaotalk
+    # - custom/matrix-bridge-beeper-linkedin
+    # - custom/matrix-bridge-go-skype-bridge
+    # - custom/matrix-bridge-wechat
+    # - custom/matrix-bridge-mautrix-facebook
+    # - custom/matrix-bridge-mautrix-twitter
+    # - custom/matrix-bridge-mautrix-hangouts
+    # - custom/matrix-bridge-mautrix-googlechat
+    # - custom/matrix-bridge-mautrix-instagram
     - custom/matrix-bridge-mautrix-meta-messenger
     - custom/matrix-bridge-mautrix-meta-instagram
-    - custom/matrix-bridge-mautrix-telegram
-    - custom/matrix-bridge-mautrix-signal
-    - custom/matrix-bridge-mautrix-gmessages
-    - custom/matrix-bridge-mautrix-whatsapp
-    - custom/matrix-bridge-mautrix-wsproxy
-    - custom/matrix-bridge-mautrix-discord
-    - custom/matrix-bridge-mautrix-slack
-    - custom/matrix-bridge-mx-puppet-discord
-    - custom/matrix-bridge-mx-puppet-groupme
-    - custom/matrix-bridge-mx-puppet-steam
-    - custom/matrix-bridge-mx-puppet-slack
-    - custom/matrix-bridge-mx-puppet-twitter
-    - custom/matrix-bridge-mx-puppet-instagram
-    - custom/matrix-bridge-sms
-    - custom/matrix-bridge-heisenbridge
+    # - custom/matrix-bridge-mautrix-telegram
+    # - custom/matrix-bridge-mautrix-signal
+    # - custom/matrix-bridge-mautrix-gmessages
+    # - custom/matrix-bridge-mautrix-whatsapp
+    # - custom/matrix-bridge-mautrix-wsproxy
+    # - custom/matrix-bridge-mautrix-discord
+    # - custom/matrix-bridge-mautrix-slack
+    # - custom/matrix-bridge-mx-puppet-discord
+    # - custom/matrix-bridge-mx-puppet-groupme
+    # - custom/matrix-bridge-mx-puppet-steam
+    # - custom/matrix-bridge-mx-puppet-slack
+    # - custom/matrix-bridge-mx-puppet-twitter
+    # - custom/matrix-bridge-mx-puppet-instagram
+    # - custom/matrix-bridge-sms
+    # - custom/matrix-bridge-heisenbridge
     - custom/matrix-bridge-hookshot
-    - custom/matrix-bot-matrix-reminder-bot
-    - custom/matrix-bot-matrix-registration-bot
-    - custom/matrix-bot-maubot
-    - custom/matrix-bot-buscarron
-    - custom/matrix-bot-honoroit
+    # - custom/matrix-bot-matrix-reminder-bot
+    # - custom/matrix-bot-matrix-registration-bot
+    # - custom/matrix-bot-maubot
+    # - custom/matrix-bot-buscarron
+    # - custom/matrix-bot-honoroit
     - custom/matrix-bot-postmoogle
-    - custom/matrix-bot-go-neb
-    - custom/matrix-bot-mjolnir
-    - custom/matrix-bot-draupnir
-    - custom/matrix-bot-chatgpt
+    # - custom/matrix-bot-go-neb
+    # - custom/matrix-bot-mjolnir
+    # - custom/matrix-bot-draupnir
+    # - custom/matrix-bot-chatgpt
     - custom/matrix-cactus-comments
     - custom/matrix-cactus-comments-client
     - custom/matrix-rageshake
+    - custom/matrix-superhero-modules
     - custom/matrix-synapse
     - custom/matrix-synapse-auto-compressor
     - custom/matrix-synapse-reverse-proxy-companion
-    - custom/matrix-dendrite
+    # - custom/matrix-dendrite
     - custom/matrix-conduit
     - custom/matrix-synapse-admin
     - galaxy/prometheus_node_exporter
@@ -109,17 +110,17 @@
     - custom/matrix-prometheus-services-connect
     - custom/matrix-registration
     - custom/matrix-client-element
-    - custom/matrix-client-hydrogen
-    - custom/matrix-client-cinny
-    - custom/matrix-client-schildichat
+    # - custom/matrix-client-hydrogen
+    # - custom/matrix-client-cinny
+    # - custom/matrix-client-schildichat
     - galaxy/jitsi
     - custom/matrix-user-verification-service
-    - custom/matrix-ldap-registration-proxy
+    # - custom/matrix-ldap-registration-proxy
     - custom/matrix-ma1sd
     - custom/matrix-dimension
     - galaxy/etherpad
     - custom/matrix-sliding-sync
-    - custom/matrix-email2matrix
+    # - custom/matrix-email2matrix
     - custom/matrix-sygnal
     - galaxy/ntfy
     - custom/matrix-static-files
