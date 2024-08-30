@@ -1460,6 +1460,8 @@ enable_set_displayname: {{ matrix_synapse_enable_set_displayname|to_json }}
 #
 #enable_set_avatar_url: false
 
+enable_set_avatar_url: {{ matrix_synapse_enable_set_displayname|to_json }}
+
 # Whether users can change the 3PIDs associated with their accounts
 # (email address and msisdn).
 #
