@@ -13,13 +13,11 @@ We run all services in [Docker](https://www.docker.com/) containers (see [the co
 [Installation](docs/README.md) (upgrades) and some maintenance tasks are automated using [Ansible](https://www.ansible.com/) (see [our Ansible guide](docs/ansible.md)).
 
 
-## Self-hosting or SaaS
+## Self-hosting or Managed / SaaS
 
 This Ansible playbook tries to make self-hosting and maintaining a Matrix server fairly easy. Still, running any service smoothly requires knowledge, time and effort.
 
-If you like the [FOSS](https://en.wikipedia.org/wiki/Free_and_open-source_software) spirit of this Ansible playbook, but prefer to put the responsibility on someone else, you can also [get a managed Matrix server from etke.cc](https://etke.cc?utm_source=github&utm_medium=readme&utm_campaign=mdad) - a service built on top of this Ansible playbook, which can help you run a Matrix server with ease.
-
-If you like learning and experimentation, but would rather reduce future maintenance effort, you can even go for a hybrid approach - self-hosting manually using this Ansible playbook at first and then transferring server maintenance to etke.cc at a later time.
+If you like the [FOSS](https://en.wikipedia.org/wiki/Free_and_open-source_software) spirit of this Ansible playbook, but prefer to put the responsibility on someone else, you can also [get a managed Matrix server from etke.cc](https://etke.cc?utm_source=github&utm_medium=readme&utm_campaign=mdad) (both hosting and on-premises) - a service built on top of this Ansible playbook but with [additional components](https://etke.cc/help/extras/?utm_source=github&utm_medium=readme&utm_campaign=mdad) and [services](https://etke.cc/services/?utm_source=github&utm_medium=readme&utm_campaign=mdad) which all help you run a Matrix server with ease. Be advised that etke.cc operates on a subscription-based approach and there is no "just set up my server once and be done with it" option.
 
 
 ## Supported services
@@ -135,15 +133,16 @@ Bots provide various additional functionality to your installation.
 
 | Name | Default? | Description | Documentation |
 | ---- | -------- | ----------- | ------------- |
+| [baibot](https://github.com/etkecc/baibot) | x | A bot that exposes the power of [AI](https://en.wikipedia.org/wiki/Artificial_intelligence) / [Large Language Models](https://en.wikipedia.org/wiki/Large_language_model) to you | [Link](docs/configuring-playbook-bot-baibot.md) |
 | [matrix-reminder-bot](https://github.com/anoadragon453/matrix-reminder-bot) | x | Bot for scheduling one-off & recurring reminders and alarms | [Link](docs/configuring-playbook-bot-matrix-reminder-bot.md) |
 | [matrix-registration-bot](https://github.com/moan0s/matrix-registration-bot) | x | Bot for invitations by creating and managing registration tokens | [Link](docs/configuring-playbook-bot-matrix-registration-bot.md) |
 | [maubot](https://github.com/maubot/maubot) | x | A plugin-based Matrix bot system | [Link](docs/configuring-playbook-bot-maubot.md) |
-| [honoroit](https://gitlab.com/etke.cc/honoroit) | x | A helpdesk bot | [Link](docs/configuring-playbook-bot-honoroit.md) |
-| [Postmoogle](https://gitlab.com/etke.cc/postmoogle) | x | Email to matrix bot | [Link](docs/configuring-playbook-bot-postmoogle.md) |
+| [honoroit](https://github.com/etkecc/honoroit) | x | A helpdesk bot | [Link](docs/configuring-playbook-bot-honoroit.md) |
+| [Postmoogle](https://github.com/etkecc/postmoogle) | x | Email to matrix bot | [Link](docs/configuring-playbook-bot-postmoogle.md) |
 | [Go-NEB](https://github.com/matrix-org/go-neb) | x | A multi functional bot written in Go | [Link](docs/configuring-playbook-bot-go-neb.md) |
 | [Mjolnir](https://github.com/matrix-org/mjolnir) | x | A moderation tool for Matrix | [Link](docs/configuring-playbook-bot-mjolnir.md) |
 | [Draupnir](https://github.com/the-draupnir-project/Draupnir) | x | A moderation tool for Matrix (Fork of Mjolnir) | [Link](docs/configuring-playbook-bot-draupnir.md) |
-| [Buscarron](https://gitlab.com/etke.cc/buscarron) | x | Web forms (HTTP POST) to matrix | [Link](docs/configuring-playbook-bot-buscarron.md) |
+| [Buscarron](https://github.com/etkecc/buscarron) | x | Web forms (HTTP POST) to matrix | [Link](docs/configuring-playbook-bot-buscarron.md) |
 | [matrix-chatgpt-bot](https://github.com/matrixgpt/matrix-chatgpt-bot) | x | ChatGPT from matrix | [Link](docs/configuring-playbook-bot-chatgpt.md) |
 
 ### Administration
@@ -157,6 +156,7 @@ Services that help you in administrating and monitoring your matrix installation
 | Metrics and Graphs | x | Consists of the [Prometheus](https://prometheus.io) time-series database server, the Prometheus [node-exporter](https://prometheus.io/docs/guides/node-exporter/) host metrics exporter, and the [Grafana](https://grafana.com/) web UI | [Link](docs/configuring-playbook-prometheus-grafana.md) |
 | [Borg](https://borgbackup.org) | x | Backups | [Link](docs/configuring-playbook-backup-borg.md) |
 | [Rageshake](https://github.com/matrix-org/rageshake) | x | Bug report server | [Link](docs/configuring-playbook-rageshake.md) |
+| [synapse-usage-exporter](https://github.com/loelkes/synapse-usage-exporter) | x | Export the usage statistics of a Synapse homeserver to be scraped by Prometheus. | [Link](docs/configuring-playbook-synapse-usage-exporter.md) |
 
 ### Misc
 
