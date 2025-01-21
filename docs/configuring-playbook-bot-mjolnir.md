@@ -49,7 +49,8 @@ matrix_synapse_container_labels_public_client_synapse_admin_api_enabled: true
 
 Manual access to Synapse's Admin APIs requires an access token for a homeserver admin account. Refer to the documentation on [how to obtain an access token](obtaining-access-tokens.md). If you have made Mjolnir an admin, you can just use the Mjolnir token.
 
-⚠️ **Warning**: Access tokens are sensitive information. Do not include them in any bug reports, messages, or logs. Do not share the access token with anyone.
+> [!WARNING]
+> Access tokens are sensitive information. Do not include them in any bug reports, messages, or logs. Do not share the access token with anyone.
 
 #### Run the `curl` command
 
