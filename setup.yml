@@ -101,6 +101,7 @@
     - custom/matrix-cactus-comments
     - custom/matrix-cactus-comments-client
     - custom/matrix-rageshake
+    - role: galaxy/matrix_superhero_modules
     - custom/matrix-synapse
     - custom/matrix-synapse-auto-compressor
     - custom/matrix-synapse-reverse-proxy-companion
