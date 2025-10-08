@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# Avoid locale warnings on systems without en_US.UTF-8 generated
+export LC_ALL=${LC_ALL:-C}
+export LANG=${LANG:-C.UTF-8}
+# Run repository pre-commit checks
+set -euo pipefail
+
+# Prefer project-local script if present
+REPO_ROOT=$(git rev-parse --show-toplevel)
+SCRIPT="$REPO_ROOT/scripts/check-unencrypted-inventory.sh"
+AUTOGEN_SCRIPT="$REPO_ROOT/scripts/pre-commit-auto-encrypt.sh"
+VAULT_PASSWORD_FILE="$REPO_ROOT/vault-password"
+
+# Only attempt auto-encrypt if VAULT_PASS or vault-password file exists
+if [[ -n "${VAULT_PASS-}" || -f "$VAULT_PASSWORD_FILE" ]]; then
+  if [[ -x "$AUTOGEN_SCRIPT" ]]; then
+    # Run the generator which will create .enc files and git-add them
+    "$AUTOGEN_SCRIPT"
+  fi
+else
+  echo "Skipping auto-encrypt (no VAULT_PASS and no $VAULT_PASSWORD_FILE)"
+fi
+
+if [[ -x "$SCRIPT" ]]; then
+  "$SCRIPT"
+fi
+
+# allow other hooks to run
+exit 0

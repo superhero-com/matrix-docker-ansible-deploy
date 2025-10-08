@@ -13,3 +13,9 @@ roles: ## Pull roles
 
 lint: ## Runs ansible-lint against all roles in the playbook
 	ansible-lint roles/custom
+
+.PHONY: init
+init: ## Initialize repo for hooks: set core.hooksPath to .githooks for this clone
+	@echo "Configuring this clone to use .githooks as git hooks path"
+	@git config core.hooksPath .githooks
+	@echo "Hooks path configured to .githooks for this clone."

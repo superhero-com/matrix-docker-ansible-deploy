@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Delegate to shared decrypt script
+export LC_ALL=${LC_ALL:-C}
+export LANG=${LANG:-C.UTF-8}
+set -euo pipefail
+
+REPO_ROOT=$(git rev-parse --show-toplevel)
+cd "$REPO_ROOT"
+
+VAULT_PASSWORD_FILE="$REPO_ROOT/vault-password"
+SCRIPT="${REPO_ROOT}/scripts/decrypt-inventory.sh"
+if [[ -n "${VAULT_PASS-}" || -f "$VAULT_PASSWORD_FILE" ]]; then
+  if [[ -x "$SCRIPT" ]]; then
+    "$SCRIPT"
+  fi
+else
+  echo "Skipping decrypt (no VAULT_PASS and no $VAULT_PASSWORD_FILE)"
+fi
+
+exit 0

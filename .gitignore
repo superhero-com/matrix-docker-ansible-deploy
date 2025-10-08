@@ -1,4 +1,12 @@
-/inventory
+/inventory/hosts
+*.bak*
+**/vault-password*
+
+# Ignore working-copy plaintext host var files; we track encrypted .enc files instead
+inventory/**/vars.yml
+!inventory/**/vars.yml.enc
+
+# Keep other repository ignores
 /roles/**/files/scratchpad
 .DS_Store
 .python-version
