@@ -51,33 +51,33 @@
 
     - role: custom/matrix-authentication-service
     - custom/matrix-corporal
-    - custom/matrix-appservice-draupnir-for-all
-    - custom/matrix-appservice-double-puppet
-    - custom/matrix-alertmanager-receiver
-    - custom/matrix-bridge-appservice-discord
-    - custom/matrix-bridge-appservice-slack
-    - custom/matrix-bridge-appservice-irc
-    - custom/matrix-bridge-appservice-kakaotalk
-    - custom/matrix-bridge-beeper-linkedin
-    - custom/matrix-bridge-wechat
-    - custom/matrix-bridge-mautrix-twitter
-    - custom/matrix-bridge-mautrix-googlechat
-    - custom/matrix-bridge-mautrix-meta-messenger
-    - custom/matrix-bridge-mautrix-meta-instagram
-    - custom/matrix-bridge-mautrix-telegram
-    - custom/matrix-bridge-mautrix-signal
-    - custom/matrix-bridge-mautrix-gmessages
-    - custom/matrix-bridge-mautrix-whatsapp
-    - custom/matrix-bridge-mautrix-wsproxy
-    - custom/matrix-bridge-mautrix-discord
-    - custom/matrix-bridge-mautrix-slack
-    - custom/matrix-bridge-mautrix-bluesky
-    - custom/matrix-bridge-mx-puppet-groupme
-    - custom/matrix-bridge-mx-puppet-steam
+    # - custom/matrix-appservice-draupnir-for-all
+    # - custom/matrix-appservice-double-puppet
+    # - custom/matrix-alertmanager-receiver
+    # - custom/matrix-bridge-appservice-discord
+    # - custom/matrix-bridge-appservice-slack
+    # - custom/matrix-bridge-appservice-irc
+    # - custom/matrix-bridge-appservice-kakaotalk
+    # - custom/matrix-bridge-beeper-linkedin
+    # - custom/matrix-bridge-wechat
+    # - custom/matrix-bridge-mautrix-twitter
+    # - custom/matrix-bridge-mautrix-googlechat
+    # - custom/matrix-bridge-mautrix-meta-messenger
+    # - custom/matrix-bridge-mautrix-meta-instagram
+    # - custom/matrix-bridge-mautrix-telegram
+    # - custom/matrix-bridge-mautrix-signal
+    # - custom/matrix-bridge-mautrix-gmessages
+    # - custom/matrix-bridge-mautrix-whatsapp
+    # - custom/matrix-bridge-mautrix-wsproxy
+    # - custom/matrix-bridge-mautrix-discord
+    # - custom/matrix-bridge-mautrix-slack
+    # - custom/matrix-bridge-mautrix-bluesky
+    # - custom/matrix-bridge-mx-puppet-groupme
+    # - custom/matrix-bridge-mx-puppet-steam
     - custom/matrix-bridge-postmoogle
-    - custom/matrix-bridge-sms
-    - custom/matrix-bridge-steam
-    - custom/matrix-bridge-heisenbridge
+    # - custom/matrix-bridge-sms
+    # - custom/matrix-bridge-steam
+    # - custom/matrix-bridge-heisenbridge
     - custom/matrix-bridge-hookshot
     - custom/matrix-bridge-zulip
     - custom/matrix-bot-matrix-reminder-bot
